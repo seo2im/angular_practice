@@ -5,4 +5,6 @@ RUN npm i -g @angular/cli
 COPY webapp /webapp
 WORKDIR /webapp
 
-CMD ng serve
+RUN npm install
+
+CMD ng serve --host 0.0.0.0 --poll --port 4000
